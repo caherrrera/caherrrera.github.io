@@ -1,19 +1,35 @@
 @font-face {
     font-family: Poppins-Regular;
-    src: url(font/Poppins-Regular.ttf);
+    src: url(font/Poppins-SemiBold.ttf);
 }
 
-.container {
+.nav {
     display: flex;
-    flex-flow: column wrap-reverse;
+    flex-flow: row wrap;
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 50px;
+    justify-content: space-between;
 }
 
-/* nav {
-    position: fixed;
-} */
+#keyboard {
+    position: absolute;
+    right: -400px;
+    bottom: 50px;
+    z-index: -1;
+    opacity: 70%;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    margin-bottom: 50px;
+}
 
 h1 {
     font-size: 4em;
+    text-align: right;
 }
 
 body {
@@ -21,4 +37,14 @@ body {
     background-color: rgb(235,235,235);
     color: rgb(50,50,50);
     cursor: url('assets/Artboard 1.svg'), auto; /**too big????? but its svg idk **/
+}
+
+a {
+    color: rgb(50,50,50);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+a:hover {
+    color: rgb(246,148,193);
+    font-size: 2em;
 }
