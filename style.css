@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap-reverse;
+}
+
+/* nav {
+    position: fixed;
+} */
+
+h1 {
+    font-size: 4em;
+}
+
+body {
+    font-family:'Poppins-Regular'; 
+    background-color: rgb(235,235,235);
+    color: rgb(50,50,50);
+    cursor: url('assets/Artboard 1.svg'), auto; /**too big????? but its svg idk **/
+}
