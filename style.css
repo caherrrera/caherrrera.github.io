@@ -3,15 +3,6 @@
     src: url(font/Poppins-SemiBold.ttf);
 }
 
-.nav {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: 10px;
-    margin-right: 50px;
-    margin-top: 50px;
-    justify-content: space-between;
-}
-
 #keyboard {
     position: absolute;
     right: -400px;
@@ -20,16 +11,26 @@
     opacity: 70%;
 }
 
+.nav {
+    position: fixed;
+
+}
+
 ul {
     list-style-type: none;
 }
 li {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 h1 {
     font-size: 4em;
     text-align: right;
+}
+
+h2 {
+    font-size: 1.5 em;
 }
 
 body {
@@ -46,5 +47,44 @@ a {
 }
 a:hover {
     color: rgb(246,148,193);
-    font-size: 2em;
+    font-size: 1.6em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#headshot {
+    float: right;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    justify-content: space-between;
+}
+.sawm {
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr;
 }
