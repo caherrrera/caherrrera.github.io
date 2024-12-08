@@ -1,47 +1,71 @@
-let img; 
+let img;
 let maze;
 
-let playerX, playerY; 
-let nextX, nextY;
-let speed = 8;
+let playerX, playerY;
+let speed = 5;
 
-function preload() { 
+//need to add : space to reload + link to contact page
+
+function preload() {
   maze = loadImage('assets/maze.png');
-  img = loadImage('assets/player.png'); }
-
-function setup() { 
-  createCanvas(windowWidth, windowHeight);
-
-  playerX = windowWidth/2; 
-  playerY = windowHeight/2;
-
-  nextX = windowWidth/2;
-  nextY = windowHeight/2;
+  img = loadImage('assets/player.png');
 }
 
-function draw() { 
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  playerX = windowWidth / 2;
+  playerY = windowHeight / 2;
+}
+
+function draw() {
   background(230);
-  translate(windowWidth/2-playerX, windowHeight/2-playerY); //keep in center
 
-  image(maze,windowWidth/2,windowHeight/2); 
+  let offsetX = windowWidth / 2 - playerX;
+  let offsetY = windowHeight / 2 - playerY;
 
-  imageMode(CENTER); 
-  image(img, playerX, playerY, 40,40);
+  translate(offsetX, offsetY); // Keep player in center
 
-  playerX = lerp(playerX, nextX, 0.1); // Adjust the lerp amount for smoothness 
-  playerY = lerp(playerY, nextY, 0.1);
+  // Render the maze and player
+  image(maze, 0, 0);
+  //imageMode(CENTER);
+  image(img, playerX, playerY, 40, 40);
 
-  let pixel = get(playerX,playerY);
+  // Movement
+  let nextX = playerX;
+  let nextY = playerY;
 
-  //controls 
-    if(keyIsDown(LEFT_ARROW)) { 
-      nextX -= speed; 
-    } else if (keyIsDown(RIGHT_ARROW)) { 
-      nextX += speed; 
-    } else if (keyIsDown(UP_ARROW)) { 
-      nextY -= speed; 
-    } else if (keyIsDown(DOWN_ARROW)) { 
-      nextY += speed; 
-    } 
+  if (keyIsDown(LEFT_ARROW)) {
+    nextX -= speed;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    nextX += speed;
+  }
+  if (keyIsDown(UP_ARROW)) {
+    nextY -= speed;
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    nextY += speed;
+  }
 
+  // Map player coordinates to maze image space
+  let mazeX = nextX;// - offsetX;
+  let mazeY = nextY;// - offsetY;
+
+  // Collision detection using `get()`
+  //if (mazeX >= 0 && mazeX < windowWidth && mazeY >= 0 && mazeY < windowHeight) {
+    let pixelColor = maze.get(mazeX, mazeY); //returns RGBA array
+
+    // Extract RGB values
+    let r = pixelColor[0];
+    let g = pixelColor[1];
+    let b = pixelColor[2];
+
+    console.log("Pixel RGB:", r, g, b);
+
+    // Collision detection logic
+    if (r < 6 && g < 6 && b < 6) { // Example condition: white areas are passable
+      playerX = nextX;
+      playerY = nextY;
+    }
 }
