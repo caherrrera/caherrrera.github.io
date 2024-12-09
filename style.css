@@ -13,7 +13,6 @@
 
 .nav {
     position: fixed;
-
 }
 
 ul {
@@ -37,17 +36,24 @@ body {
     font-family:'Poppins-Regular'; 
     background-color: rgb(235,235,235);
     color: rgb(50,50,50);
-    cursor: url('assets/Artboard 1.svg'), auto; /**too big????? but its svg idk **/
+    cursor: url('assets/cursor.png'), auto; 
 }
 
 a {
     color: rgb(50,50,50);
     text-decoration: none;
     font-size: 1.5em;
+    cursor: url('assets/cursor-hover.png'), auto; 
 }
 a:hover {
+    transition: 0.2s;
     color: rgb(246,148,193);
     font-size: 1.6em;
+    cursor: url('assets/cursor-hover.png'), auto; 
+}
+nav img:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
 }
 
 .container {
