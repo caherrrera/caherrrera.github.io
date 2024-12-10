@@ -3,6 +3,15 @@
     src: url(font/Poppins-SemiBold.ttf);
 }
 
+body {
+    font-family:'Poppins-Regular'; 
+    font-size: 1em;
+    color: rgb(50,50,50);
+    background-color: rgb(230,230,230);
+    cursor: url('assets/cursor.png'), auto; 
+}
+
+
 #keyboard {
     position: absolute;
     right: -400px;
@@ -32,12 +41,7 @@ h2 {
     font-size: 1.5 em;
 }
 
-body {
-    font-family:'Poppins-Regular'; 
-    background-color: rgb(235,235,235);
-    color: rgb(50,50,50);
-    cursor: url('assets/cursor.png'), auto; 
-}
+
 
 a {
     color: rgb(50,50,50);
@@ -50,6 +54,20 @@ a:hover {
     color: rgb(246,148,193);
     font-size: 1.6em;
     cursor: url('assets/cursor-hover.png'), auto; 
+}
+a:visited:hover {
+    transition: 0.2s;
+    color: rgb(246,148,193);
+    font-size: 1.6em;
+    cursor: url('assets/cursor-hover.png'), auto; 
+}
+a:visited {
+    transition: 0.2s;
+    color: rgb(55,55,55);
+}
+a:active {
+    transition: 0.2s;
+    color: rgb(236,138,183);
 }
 nav img:hover {
     transition: 0.2s;
@@ -100,4 +118,61 @@ nav img:hover {
     display: grid;
     grid-template-columns: 0.3fr 0.3fr 0.3fr;
     justify-content: space-between;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        font-family:'Poppins-Regular'; 
+        font-size: 1em;
+        background-color: rgb(50,50,50);
+        color: rgb(230,230,230);
+        cursor: url('assets/cursor.png'), auto; 
+    }
+    a {
+        color: rgb(230,230,230);
+        text-decoration: none;
+        font-size: 1.5em;
+        cursor: url('assets/cursor-hover.png'), auto; 
+    }
+    a:visited {
+        transition: 0.2s;
+        color: rgb(235,235,235);
+    }
+}
+
+@media (max-width:888px){ 
+    .container {
+        display: grid;
+        grid-template-rows: 0.25fr 0.75fr;
+    
+        margin-right: 25px;
+        margin-top: 25px;
+    }
+    .nav {
+        position: static;
+        margin-bottom: 0px;
+    }
+    ul,li {
+        display: inline;
+        text-align: center;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:375px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    
+        margin-right: 25px;
+        margin-top: 25px;
+    }
+    .nav {
+        position: static;
+        margin-bottom: 0px;
+    }
+    ul,li {
+        display: inline;
+        text-align: center;
+    }
 }
