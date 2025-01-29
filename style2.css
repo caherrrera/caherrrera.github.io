@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Poppins-Semibold;
+    src: url(font/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url(font/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+body {
+    font-family:'Poppins-Regular'; 
+    font-size: 1em;
+    color: rgb(50,50,50);
+    background-color: rgb(240,240,240);
+    cursor: url('assets/cursor.png'), auto; 
+
+    display: flex;
+    margin-left: 33px;
+    margin-right: 33px;
+    margin-bottom: 33px;
+    margin-top: 33px;
+}
+h1 {
+    font-family: 'Poppins-ExtraBold';
+    font-size: 3em;
+    margin-left: 10px;
+}
+h2 {
+    font-family: 'Poppins-SemiBold';
+}
+
+#left-col {
+    width: 60%;
+}
+#right-col {
+    width: 40%;
+}
+
+.thumbnail {
+    width: 30%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    right: 22px;
+    text-align: right;
+}
+h6{
+    font-style: italic;
+    color: rgb(88,88,88); /*i like repeating numbers.. sue me*/
+}
+
+
+a {
+    text-decoration: none;
+}
+a:link, a:active {
+    color: rgb(50,50,50);
+}
+a:visited {
+    color: rgb(70,70,70);
+}
+a:hover {
+    color: rgb(88,88,88);
+}
