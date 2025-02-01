@@ -11,19 +11,44 @@
     src: url(font/Poppins-Regular.ttf);
 }
 
+html, body {
+    height: 100vh;  /* Ensures the body takes the full viewport height */
+    margin: 0; /* Resets margins to prevent unwanted spacing */
+    padding: 0;
+    overflow: hidden; /* Prevents the whole page from scrolling */
+}
+
 body {
     font-family:'Poppins-Regular'; 
     font-size: 1em;
     color: rgb(50,50,50);
     background-color: rgb(240,240,240);
-    cursor: url('assets/cursor.png'), auto; 
+    /*cursor: url('assets/cursor.png'), auto; */ 
 
     display: flex;
     margin-left: 33px;
     margin-right: 33px;
     margin-bottom: 33px;
-    margin-top: 33px;
+    /* margin-top: 33px; */
+
+    display: flex;
 }
+#left-col {
+    width: 60%;
+    height: 100%;
+
+    margin-top: 50px;
+    overflow: auto;
+}
+#right-col {
+    width: 40%;
+    height: 100%;
+
+    margin-top: 77px;
+    margin-right: 33px;
+    overflow: auto;
+}
+
 h1 {
     font-family: 'Poppins-ExtraBold';
     font-size: 3em;
@@ -31,19 +56,15 @@ h1 {
 }
 h2 {
     font-family: 'Poppins-SemiBold';
-}
-
-#left-col {
-    width: 60%;
-}
-#right-col {
-    width: 40%;
+    padding: 0%;
+    color: rgb(70,70,70);
 }
 
 .thumbnail {
     width: 30%;
     justify-content: space-between;
     padding: 10px;
+    border-radius: 20px
 }
 
 footer{
@@ -69,4 +90,14 @@ a:visited {
 }
 a:hover {
     color: rgb(88,88,88);
+}
+
+#home-text {
+    text-align: right;
+}
+
+.icon {
+    margin-top: 22px;
+    margin-left: 22px;
+    opacity: 70%;
 }
