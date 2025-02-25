@@ -49,6 +49,10 @@ body {
     overflow: auto;
 }
 
+/* #projects {
+    display: none; 
+} */
+
 h1 {
     font-family: 'Poppins-ExtraBold';
     font-size: 3em;
@@ -100,4 +104,8 @@ a:hover {
     margin-top: 22px;
     margin-left: 22px;
     opacity: 70%;
+}
+
+p a {
+    text-decoration: underline;
 }
