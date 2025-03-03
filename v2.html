@@ -10,25 +10,29 @@
     </head>
 
     <body>
-        <div id="left-col">
+        <div id="container">
+
+        <div id="leftCol">
             <a href="v2.html"> <h1>Carolina Herrera</h1> </a>
 
-            <a href="v2.html#arson">
-                <img class="thumbnail" title="ARSON!" src="assets/arson-square.png" alt="arson thumbnail"></a>
-            <img class="thumbnail" id="pixi" title="For Pixi" src="assets/arson-square.png">
-            <img class="thumbnail" id="tarot" title="#STUPiDTAROT" src="assets/arson-square.png">
-            <img class="thumbnail" id="bread" title="BREAD" src="assets/arson-square.png">
-            <img class="thumbnail" id="doc-lab" title="Doc Lab Promos" src="assets/arson-square.png">
-            <img class="thumbnail" id="matchy" title="MatchyMatchy" src="assets/arson-square.png">
-            <img class="thumbnail" id="poster" title="I Feel Free" src="assets/arson-square.png">
-            <img class="thumbnail" id="sawm" title="SAWM" src="assets/arson-square.png">
-            <img class="thumbnail" id="madlibs" title="Quick! Madlibs" src="assets/arson-square.png">
-            <img class="thumbnail" id="house" title="The House" src="assets/arson-square.png">
-            <img class="thumbnail" id="art" title="Original Artworks" src="assets/arson-square.png">
-            <img class="thumbnail" id="idk" title="idk!" src="assets/arson-square.png">
+            <div id="thumbnails">
+                <img class="thumbnail" id="pixi" title="For Pixi" src="assets/pixi.jpg">
+                <a href="v2.html#arson">
+                    <img class="thumbnail" title="ARSON!" src="assets/arson-square.png" alt="arson thumbnail"></a>
+                <img class="thumbnail" id="tarot" title="#STUPiDTAROT" src="assets/tarot.png">
+                <img class="thumbnail" id="bread" title="BREAD" src="assets/bread.png">
+                <img class="thumbnail" id="doc-lab" title="Doc Lab Promos" src="assets/doclab2.png">
+                <img class="thumbnail" id="matchy" title="MatchyMatchy" src="assets/matchy.png">
+                <img class="thumbnail" id="poster" title="I Feel Free" src="assets/poster.png">
+                <img class="thumbnail" id="sawm" title="SAWM" src="assets/sawm-square.png">
+                <img class="thumbnail" id="madlibs" title="Quick! Madlibs" src="assets/madlibs-square.png">
+                <img class="thumbnail" id="house" title="The House" src="assets/house-square.png">
+                <img class="thumbnail" id="art" title="Original Artworks" src="assets/drawing.jpg">
+                <img class="thumbnail" id="idk" title="idk!" src="assets/arson-square.png">
+            </div>
         </div>
 
-        <div id="right-col">
+        <div id="rightCol">
             <div id="home-text">
                 <img src="assets/logo-pink.svg" width="15%">
                     <h2>Video Art.</h2>
@@ -55,7 +59,6 @@
             </div>
 
             <div id="projects">
-                <div id="right-col">
                     <div class="project">
                         <h1 id="arson">ARSON!</h1>
                         <h5>November 2024</h5>
@@ -86,7 +89,7 @@
                             characters were animated using cutout collage techniques.</p>
                     </div>
                     <div class="project">
-                        <h1 id="doc-lab">Documentation Lab</h1>
+                        <h1 id="doc-lab">Doc Lab</h1>
                         <h5>2022 - Present</h5>
                         <h3>Adobe Premiere Pro + After Effects.</h3>
         
@@ -194,16 +197,31 @@
                         <p>Hand-drawn pieces made with pen and colored pencils that live on my Instagram. 
                            I like playing with intricate details, bold colors, and whatever ideas pop into my head. </p>
                     </div>
-        
                 </div>
             </div>
+        
         </div>
 
-        <footer><h6>coded by me with luv ; last updated feb 24</h6></footer>
+        <footer><h6>coded by me with luv ; last updated mar 2</h6></footer>
 
         <script>
             //click on thumbnail, get project id
             //hide home text div, show projects div, straight to project tht was clicked
+            const projectsDiv = document.getElementById('projects');
+            projectsDiv.classList.add('hidden');
+            
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            // console.log(thumbnails.length);
+            const homeText = document.querySelector('#home-text');
+
+            for(i = 0; i < thumbnails.length; i++) {
+                thumbnails[i].onclick = function() {
+                    if(projectsDiv.classList.contains('hidden')){
+                        projectsDiv.classList.remove('hidden');
+                        homeText.classList.add('hidden');
+                    }
+                }
+            }
 
         </script>
 
