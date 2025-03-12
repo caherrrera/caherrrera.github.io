@@ -22,12 +22,15 @@ html, body {
     grid-template-columns: 50% 50%;
     margin-left: 25px;
     margin-right: 25px;
+    height: 100vh; 
+    overflow: hidden;
 }
 video, #rightCol, h1 {
     width: 100%;
 }
-#rightCol {
-    margin-top: 50px;
+#rightCol, #leftCol {
+    overflow: auto;
+    height: 100vh; 
 }
 
 .hidden {
