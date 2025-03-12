@@ -106,3 +106,8 @@ a:hover {
 p a {
     text-decoration: underline;
 }
+
+#logo:hover{
+    scale: 111%;
+    transition: 0.111s ease-in-out;
+}
