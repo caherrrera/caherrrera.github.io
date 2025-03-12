@@ -53,7 +53,7 @@ h2 {
 .thumbnail:hover {
     opacity: 100%;
     filter: saturate(1);
-    transition: filter 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out; 
     transition: opacity 0.2s ease-in-out;
 }
 
