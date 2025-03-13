@@ -62,11 +62,37 @@
                     <h2>Games.</h2>
                     <h2>Creative Coding.</h2>
                     <h2>Design.</h2>
+                    <img id="star" src="assets/star.png" title="More about me...">
+                    <!-- <img id="star" src="assets/star2.png"> -->
 
                 <br><br><br>
-                <!-- <h2>cah9552@nyu.edu</h2> -->
+
+                <div id="about-me" class="hidden">
+                    <img src="assets/headshot2.jpg" id="headshot" alt="Headshot">
+                    <p class="about-me-text">Hi! I'm Carolina Herrera, a Dominican-born <span class="bold">creative technologist</span> 
+                        from Miami, Florida. I've been drawn to making things for as long as I can remember, from doodling in the margins 
+                        of notebooks to shooting videos with friends. That early curiosity has shaped how I approach 
+                        my work today: as a chance to try new things and bring ideas to life in experimental ways.
+                    </p>
+                    <p class="about-me-text">With my <span class="bold">Interactive Media Arts</span> major and double minor in Game Design and Web Applications 
+                        from NYU, my work blends animation, coding, video, and storytelling to create interactive and playful experiences. 
+                        I enjoy exploring how different tools and mediums can work together to say something unexpected.
+                    </p>
+                    <p class="about-me-text">
+                        I've worked on everything from livestream productions to coding games and making video graphics. Each project 
+                        has taught me something new and strengthened my passion for combining technology and creativity.
+                    </p>
+                    <p class="about-me-text">
+                        As I look ahead I'm excited to keep experimenting, learning, and creating.<br> I'm always 
+                        looking for what's next.
+                    </p>
+                </div>
+
+                <br><br><br>
+
+                <div id="socials">
                 <!-- social media icons created by Freepik - Flaticon -->
-                 <a href="https://instagram.com/croissanf" target="_blank" title="@croissanf">
+                <a href="https://instagram.com/croissanf" target="_blank" title="@croissanf">
                     <img class="icon" src="assets/instagram.png" width="5%">
                  </a>
                  <a href="http://www.youtube.com/@croissanf" target="_blank" title="@croissanf">
@@ -78,6 +104,7 @@
                  <a href="mailto:cah9552@nyu.edu" target="_blank" title="cah9552@nyu.edu">
                     <img class="icon" src="assets/message.png" width="5%">
                  </a>
+                </div>
             </div>
 
             <div id="projects">
@@ -256,7 +283,7 @@
 
         <script>
             //click on thumbnail, get project id
-            //hide home text div, show projects div, straight to project tht was clicked
+            //hide home text div, show projects div, straight to project tht was cl icked
             const projectsDiv = document.getElementById('projects');
             projectsDiv.classList.add('hidden');
             
@@ -273,6 +300,31 @@
                 }
             }
 
+            //headshot hovering
+            const headshot = document.querySelector('#headshot');
+            
+            headshot.addEventListener('mouseover', function(){
+                headshot.src = 'assets/headshot3.jpg';
+            });
+            headshot.addEventListener('mouseout', function(){
+                headshot.src = 'assets/headshot2.jpg';
+            });
+
+            //open about me panel
+            const aboutMe = document.querySelector('#about-me');
+            const star = document.querySelector('#star');
+            const footer = document.querySelector('footer');
+
+            star.onclick = function() {
+                if(aboutMe.classList.contains('hidden')){
+                    aboutMe.classList.remove('hidden');
+                    footer.classList.add('hidden');
+                } else {
+                    aboutMe.classList.add('hidden');
+                    footer.classList.remove('hidden');
+                }
+            }
+        
         </script>
 
     </body>

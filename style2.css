@@ -20,8 +20,8 @@ html, body {
 #container {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
     height: 100vh; 
     overflow: hidden;
 }
@@ -107,7 +107,29 @@ p a {
     text-decoration: underline;
 }
 
-#logo:hover, .icon:hover{
+#logo:hover, .icon:hover, #star:hover{
     scale: 111%;
     transition: 0.111s ease-in-out;
+}
+
+#star {
+    width: 33px;
+    height: auto;
+    opacity: 88%;
+}
+
+#headshot {
+    margin-top: -55px;
+    width: 333px;
+    height: auto;
+    border: 8px solid rgb(88,88,88); 
+    border-radius: 400px;
+}
+.about-me-text {
+    /* width: 75%; */
+    float: right; 
+}
+.bold {
+    font-family: 'Poppins-Semibold';
+    /* font-weight: 900; */
 }
