@@ -10,7 +10,9 @@
     </head>
 
     <body>
+        <button id="dark-mode-button">dark mode</button>
         <div id="container">
+            
 
         <div id="leftCol">
             <a href="index.html"> <h1 id="name">Carolina Herrera</h1> </a>
@@ -270,12 +272,12 @@
                     </div>
                 </div>
             </div>
-        
         </div>
 
         <footer><h6>coded by me with luv : last updated mar 14 : <a href="v1.html" target="_blank" style="text-decoration: underline;">site v1</a></h6></footer>
 
         <script>
+            console.log("Hi!! thanks for visiting my site.. if you think it's cool pls hire me <3");
             //click on thumbnail, get project id
             //hide home text div, show projects div, straight to project tht was cl icked
             const projectsDiv = document.getElementById('projects');
@@ -320,14 +322,52 @@
             }
 
             let allThumbnails = document.querySelectorAll('.thumbnail');
-            console.log(allThumbnails);
+            //console.log(allThumbnails);
 
             for(let i = 0; i< allThumbnails.length; i++) {
                 allThumbnails[i].addEventListener('click', function(){
-                    console.log('clicked');
                     if(!(footer.classList.contains('hidden'))){
                     footer.classList.add('hidden');
                 }} )
+            }
+
+            //darkmode
+            const html = document.querySelector('html');
+            const body = document.querySelector('body');
+            const darkModeButton = document.querySelector('#dark-mode-button');
+            const h2s = document.querySelectorAll('h2');
+            const h1 = document.querySelector('h1');
+            const a = document.querySelectorAll('a');
+            const icons = document.querySelectorAll('.icon');
+            console.log(h2s);
+
+            darkModeButton.onclick = function() {
+                body.classList.toggle('dark-mode');
+                html.classList.toggle('dark-mode');
+                darkModeButton.classList.toggle('dark-mode');
+                h1.classList.toggle('h2-dark');
+
+                if(darkModeButton.innerText == 'dark mode'){
+                    darkModeButton.innerText = 'light mode';
+                } else if (darkModeButton.innerText == 'light mode') {
+                    darkModeButton.innerText = 'dark mode';
+                }
+
+                for(i = 0; i< h2s.length; i++) {
+                    h2s[i].classList.toggle('h2-dark');
+                }
+                for(i = 0; i < a.length; i++) {
+                    a[i].classList.toggle('dark-mode');
+                }
+                for(i = 0; i < icons.length; i++) {
+                    icons[i].classList.toggle('dark-mode');
+                }
+
+                if(star.src.includes('assets/star.png')){
+                    star.src = 'assets/star-light.png';
+                } else if(star.src.includes('assets/star-light.png')){
+                    star.src = 'assets/star.png';
+                }
             }
         
         </script>

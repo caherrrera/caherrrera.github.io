@@ -17,6 +17,10 @@ html, body {
     color: rgb(50,50,50);
     background-color: rgb(248,248,248);
 }
+.dark-mode {
+    background-color: rgb(50,50,50);
+    color: rgb(248,248,248);
+}
 #container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -44,6 +48,9 @@ h1 {
 h2 {
     font-family: 'Poppins-SemiBold';
     color: rgb(70,70,70);
+}
+.h2-dark {
+    color: rgb(222,222,222);
 }
 
 .thumbnail {
@@ -90,6 +97,15 @@ a:visited {
 a:hover {
     color: rgb(88,88,88);
 }
+.dark-mode a:link, a:active {
+    color: rgb(222,222,222);
+}
+.dark-mode a:visited {
+    color: rgb(233,233,233);
+}
+.dark-mode a:hover {
+    color: rgb(255,255,255);
+}
 
 #home-text {
     text-align: right;
@@ -101,6 +117,11 @@ a:hover {
     margin-top: 22px;
     margin-left: 22px;
     opacity: 70%;
+}
+.dark-mode .icon {
+    filter: invert(1);
+    border-radius: 5px;
+    opacity: 50%;
 }
 
 p a {
@@ -132,4 +153,28 @@ p a {
 .bold {
     font-family: 'Poppins-Semibold';
     /* font-weight: 900; */
+}
+.button-light-mode{
+    color: rgb(111,111,111);
+    background-color: rgb(55,55,55);
+}
+#dark-mode-button{
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    color: rgb(255,255,255);
+    background-color: rgb(230,230,230);
+}
+#dark-mode-button:hover{
+    color: rgb(111,111,111);
+    background-color: rgb(55,55,55);
+    transition: 0.5s ease-in-out;
+}
+.dark-mode #dark-mode-button {
+    color: rgb(111,111,111);
+    background-color: rgb(44,44,44);
+}
+.dark-mode #dark-mode-button:hover {
+    color: rgb(255,255,255);
+    background-color: rgb(230,230,230);
 }
