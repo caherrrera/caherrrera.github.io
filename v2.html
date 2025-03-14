@@ -46,7 +46,7 @@
                     <img class="thumbnail" title="Quick! Madlibs" src="assets/madlibs-square.png">
                 </a>
                 <a href="v2.html#house">
-                    <img class="thumbnail" title="The House" src="assets/house-square.png">
+                    <img class="thumbnail" title="The House" src="assets/house-square.jpeg">
                 </a>
                 <a href="v2.html#art">
                     <img class="thumbnail" title="Original Artworks" src="assets/drawing2.jpg">
@@ -318,16 +318,17 @@
                     footer.classList.remove('hidden');
                 }
             }
-            //trying to hide footer on projects page...
-            // let allThumbnails = document.querySelectorAll('.thumbnail');
 
-            // for(let i = 0; i< allThumbnails.length; i++) {
-            //     allThumbnails[i].addEventListener('onclick', function(){
-            //         console.log('clicked');
-            //         if(!(footer.classList.contains('hidden'))){
-            //         footer.classList.add('hidden');
-            //     }} )
-            // }
+            let allThumbnails = document.querySelectorAll('.thumbnail');
+            console.log(allThumbnails);
+
+            for(let i = 0; i< allThumbnails.length; i++) {
+                allThumbnails[i].addEventListener('click', function(){
+                    console.log('clicked');
+                    if(!(footer.classList.contains('hidden'))){
+                    footer.classList.add('hidden');
+                }} )
+            }
         
         </script>
 
